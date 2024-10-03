@@ -1,4 +1,4 @@
-#include "fileLoader.h"
+#include "fileloader.h"
 
 Material getMaterialType(std::string materialStr) {
     if (materialStr == "baba") {
@@ -106,7 +106,6 @@ string materialToText(Material m) {
 std::vector<ObjectGame> FileLoader::loadFile(int level, bool isSave) {
     // Construction du nom de fichier pour le niveau donné
     std::string filename;
-    // std::filesystem::path working_directory { std::filesystem::current_path() };
     if (!isSave){
 
         filename = "../../ProjectStructureGui/src/level_" + std::to_string(level) + ".txt";
